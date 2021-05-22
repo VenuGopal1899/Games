@@ -4,7 +4,7 @@ function showProfile(user)
         var uuser = JSON.stringify(user);
         console.log(uuser);
         sessionStorage.setItem("user", uuser);
-        window.location.href = "http://localhost:4000/gamerProfile";
+        window.location.href = "https://arcades-assemble.herokuapp.com/gamerProfile";
     }
 
 }

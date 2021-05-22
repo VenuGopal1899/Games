@@ -32,10 +32,10 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to remote MongoDB cluster
-// const dbURI = process.env.MONGODB_URI;
+const dbURI = process.env.MONGODB_URI;
 
 // Local MongoDB Server
-const dbURI = 'mongodb://localhost:27017/login-app-db';
+// const dbURI = 'mongodb://localhost:27017/login-app-db';
 
 mongoose.connect(dbURI)
 const db = mongoose.connection
@@ -96,7 +96,7 @@ const sendEmail = (email, ign, verifyUniqueString) => {
 		html: `
 				<h2>Hi ${ign}, </h2>
 				<h4> You are almost ready to start enjoying Arcades Assemble. </h4>
-				<h4>Click <a href=http://localhost:4000/api/verify/${verifyUniqueString}> here </a> to verify your email.</h4>
+				<h4>Click <a href=https://arcades-assemble.herokuapp.com/api/verify/${verifyUniqueString}> here </a> to verify your email.</h4>
 				`
 	}
 	transport.sendMail(mailOptions, function(error, response) {

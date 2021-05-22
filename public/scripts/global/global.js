@@ -54,7 +54,7 @@ async function userLogout(){
     }
   })
   .then(() => {
-    window.location.href = "http://localhost:4000/login";
+    window.location.href = "https://arcades-assemble.herokuapp.com/login";
   });
 }
 
@@ -156,6 +156,6 @@ async function editProfile(){
       user.middleName = middleName;
       let uuser = JSON.stringify(user);
       sessionStorage.setItem("user", uuser);
-      window.location.href="http://localhost:4000/gamerProfile";
+      window.location.href="https://arcades-assemble.herokuapp.com/gamerProfile";
   });
 }
